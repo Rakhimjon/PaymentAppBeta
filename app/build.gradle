@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.technology.paymentappbeta"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:support-v4:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+    //compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+
+    testCompile 'junit:junit:4.12'
+}
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'sticky-header-recyclerview'
+
+    publishedGroupId = 'info.acidflow.android'
+    libraryName = 'Sticky Header Recyclerview'
+    artifact = 'sticky-header-recyclerview'
+
+    libraryDescription = 'Sticky-header-recyclerview is an Android library that helps you create ' +
+            'sticky headers on a RecyclerView.This is compatible with GridLayoutManager and ' +
+            'LinearLayoutManager.'
+
+    siteUrl = 'https://github.com/AcidFlow/sticky-header-recyclerview'
+    gitUrl = 'https://github.com/AcidFlow/sticky-header-recyclerview.git'
+
+
+
+    developerId = 'AcidFlow'
+    developerName = 'Paul Laturaze'
+    developerEmail = 'laturaze.paul@gmail.com'
+
+    licenseName = 'MIT'
+    licenseUrl = 'http://www.opensource.org/licenses/mit-license.php'
+    allLicenses = ["MIT"]
+}
+
+
+
+
